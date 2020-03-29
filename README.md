@@ -17,6 +17,8 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 | Whole Genome Sequence | SRA | Assemble the PacBio record and correct with the Illumina record. |
 | Annotation for *Durio Zibethinus* | NCBI Genome | GCF_002303985.1 |
 
+*Durio z.* has a total genome length of 715.23 megabases. The PacBio and Illumina SRA records are 27.4Gb and 83.3Gb respectively. I suspect I will have to delete files after each step up until completing assembly; e.g. delete after aligning, and assembly. I will make sure I will have a clear + coherent directory tree and naming scheme for all steps and files.
+
 [more to fill out]
 
 | Software | Analysis |
@@ -41,9 +43,17 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 - [ ] Familiarize with UPPMAX interface and tools.
 - [ ] Draft a near-complete project plan
 
-#### Week 15, April 15 - April 10
+#### Week 15, April 6 - April 11
 - [ ] Assemble *Durio z.* genome 
 
+#### Week 16, April 13 - April 18
+- [ ] Transcriptome assembly (not sure if using RNA-seq data from SRA or directly from the genome assembly)
+
+#### Week 17, April 20 - April 25
+- [ ] Use Maker2 and annotation genome + transcriptomic assembly. Compare it to see if need for correction with the existing annotation file for draft genome presented by paper.
+
+#### Week 18, April 27 - May 1
+#### Week 20, May 4 - May 8
 
 ## Results
 ## Limitations
