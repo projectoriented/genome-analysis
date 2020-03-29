@@ -12,12 +12,13 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 
 ## Data, data management, and softwares
 
+#### Estimate space required + how data will be organized
+*Durio z.* has a total genome length of 715.23 megabases. The PacBio and Illumina SRA records are 27.4Gb and 83.3Gb respectively. I suspect I will have to delete files after each step up until completing assembly; e.g. delete after aligning, and assembly. I will make sure I will have a clear + coherent directory tree and naming scheme for all steps and files.
+
 | Type of data | Source | Description |
 | --- | --- | --- |
 | Whole Genome Sequence | SRA | Assemble the PacBio record and correct with the Illumina record. |
 | Annotation for *Durio Zibethinus* | NCBI Genome | GCF_002303985.1 |
-
-*Durio z.* has a total genome length of 715.23 megabases. The PacBio and Illumina SRA records are 27.4Gb and 83.3Gb respectively. I suspect I will have to delete files after each step up until completing assembly; e.g. delete after aligning, and assembly. I will make sure I will have a clear + coherent directory tree and naming scheme for all steps and files.
 
 [more to fill out]
 
@@ -32,10 +33,13 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 ## Methods
 
 **Genome assembly.**
+
 **Transcriptome assembly.**
+
 **Genome annotation.**
+
 **Phylogeny.**
-**
+
 
 ## Time Plan
 
