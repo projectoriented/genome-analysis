@@ -8,7 +8,19 @@ canu -trim \
     -pacbio-corrected .durioz.correctedReads.fasta.gz
 
 canu -assemble \
-  -p durioz -d . ecoli-erate-0.039 \
+  -p durioz -d durioz-erate-0.030 \
   genomeSize=500m \
-  correctedErrorRate=0.039 \
-  -pacbio-corrected ecoli/ecoli.trimmedReads.fasta.gz
+  correctedErrorRate=0.030 \
+  -pacbio-corrected .durioz.trimmedReads.fasta.gz
+
+canu -assemble \
+  -p durioz -d durioz-erate-0.045 \
+  genomeSize=500m \
+  correctedErrorRate=0.045 \
+  -pacbio-corrected .durioz.trimmedReads.fasta.gz
+
+canu -assemble \
+  -p durioz -d durioz-erate-0.055 \
+  genomeSize=500m \
+  correctedErrorRate=0.055 \
+  -pacbio-corrected .durioz.trimmedReads.fasta.gz
