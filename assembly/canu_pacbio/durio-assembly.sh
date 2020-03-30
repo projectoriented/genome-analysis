@@ -6,3 +6,9 @@ canu -trim \
     -p durioz -d . \
     genomeSize=500m \
     -pacbio-corrected .durioz.correctedReads.fasta.gz
+
+canu -assemble \
+  -p durioz -d . ecoli-erate-0.039 \
+  genomeSize=500m \
+  correctedErrorRate=0.039 \
+  -pacbio-corrected ecoli/ecoli.trimmedReads.fasta.gz
