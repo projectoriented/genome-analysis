@@ -12,7 +12,7 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 
 ## Data, data management, and softwares
 
-#### Estimate space required + how data will be organized
+### Estimate space required + how data will be organized
 *Durio z.* has a total genome length of 715.23 megabases. The PacBio and Illumina SRA records are 27.4Gb and 83.3Gb respectively. I suspect I will have to delete files after each step up until completing assembly; e.g. delete after aligning, and assembly. I will make sure I will have a clear + coherent directory tree and naming scheme for all steps and files.
 
 | Type of data | Source | Description |
@@ -29,6 +29,7 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 | Trinity | RNA-seq assembly |
 | Maker2 | Annotation |
 | BWA, TopHat | Aligner |
+| HTseq | Differential Analysis |
 
 ## Methods
 
@@ -57,6 +58,9 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 - [ ] Use Maker2 and annotation genome + transcriptomic assembly. Compare it to see if need for correction with the existing annotation file for draft genome presented by paper.
 
 #### Week 18, April 27 - May 1
+- [ ] Use either HTseq or Deseq2 (R library) to perform differential analysis.
+- [ ] Perform comparative analysis on genes with homologous species that can give me some information on identifying functional information regarding the husk, locules, and seed. 
+
 #### Week 20, May 4 - May 8
 
 ## Results
