@@ -16,6 +16,9 @@ bwa mem -t 8 \
 samtools view -b -@ 8 $dir_align/SRR6058604-aln.sam | \
     samtools sort > $dir_align/SRR6058604-aln-sorted.bam
 
+samtools index $dir_align/SRR6058604-aln-sorted.bam 
+samtools faidx $dir/02*/durioz.contigs.fasta 
+
 # Pilon
 pilon \
     --genome $dir/02*/durioz.contigs.fasta \

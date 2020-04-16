@@ -2,7 +2,7 @@
 
 #SBATCH -A g2020008
 #SBATCH -p core
-#1;95;0cSBATCH -n 4
+#SBATCH -n 4
 #SBATCH -t 24:00:00
 #SBATCH -J all-pac2ill
 #SBATCH --mail-type=ALL
