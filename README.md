@@ -45,11 +45,11 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 ## Time Plan
 
 #### Week 14, March 30 - April 3
-- [ ] Familiarize with UPPMAX interface and tools.
-- [ ] Draft a near-complete project plan
+- [x] Familiarize with UPPMAX interface and tools.
+- [x] Draft a near-complete project plan
 
 #### Week 15, April 6 - April 11
-- [ ] Assemble *Durio z.* genome 
+- [x] Assemble *Durio z.* genome 
 
 #### Week 16, April 13 - April 18
 - [ ] Transcriptome assembly (not sure if using RNA-seq data from SRA or directly from the genome assembly)
