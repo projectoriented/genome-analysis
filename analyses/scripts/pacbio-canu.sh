@@ -34,11 +34,3 @@ canu -assemble \
     executiveThreads=8 \
     executiveMemory=25.6 \
     -pacbio-corrected $dir_re/correction_canu/durioz.trimmedReads.fasta.gz
-
-
-# Load modules for illumina-bwa.sh
-module load FastQC
-module load bwa
-module load samtools
-
-$dir/scripts/illumina-bwa.sh
