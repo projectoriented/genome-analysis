@@ -1,4 +1,18 @@
-#!/bin/bash
+#!/bin/bash -l
+
+#SBATCH -A g2020008
+#SBATCH -p core
+#SBATCH -n 4
+#SBATCH -t 24:00:00
+#SBATCH -J all-pac2ill
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user meifang.wu.7427@student.uu.se
+
+module load bioinfo-tools
+module load FastQC
+module load bwa
+module load samtools
+module load Pilon
 
 dir=~/genome-analysis/analyses
 
@@ -16,14 +30,16 @@ bwa mem -t 8 \
 samtools view -b -@ 8 $dir_align/SRR6058604-aln.sam | \
     samtools sort > $dir_align/SRR6058604-aln-sorted.bam
 
-samtools index $dir_align/SRR6058604-aln-sorted.bam 
-samtools faidx $dir/02*/canu_assembly/durioz.contigs.fasta 
+rm $dir_align/SRR6058604-aln.sam
+
+samtools index $dir_align/SRR6058604-aln-sorted.bam > $dir_align/SRR6058604-aln-sorted.bam.bai
 
 # Pilon
 pilon \
     --genome $dir/02*/canu_assembly/durioz.contigs.fasta \
     --frags $dir_align/SRR6058604-aln-sorted.bam \
-    --output durioz-pilon \
+    --changes \
+    --output durioz.pilon \
     --outdir $dir/02_genome_assembly/pilon_assembly/ \
     --threads 8 \
     --diploid
