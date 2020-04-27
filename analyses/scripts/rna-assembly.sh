@@ -17,13 +17,12 @@ data=~/genome-analysis/analyses/data/raw_data/transcriptome/trimmed
 
 files=( $(ls -d /home/mei/genome-analysis/analyses/data/raw_data/transcriptome/trimmed/*_scaffold_10.*.fastq.gz) )
 
-for (( i=0; i<${#files[@]}; i+=2 ))
-do
+#~/genome-analysis/analyses/scripts/rna-index-star.sh
+
+for (( i=0; i<${#files[@]}; i+=2 )); do
     p1=$(echo ${files[i]})
     p2=$(echo ${files[i+1]})
     sra=$(echo $p1 | grep -oE '\bSRR[0-9]{7}')
-
-    #~/genome-analysis/analyses/scripts/rna-index-star.sh
 
     star \
 	--runThreadN 8 \
@@ -39,10 +38,10 @@ do
 	--genome_guided_max_intron 10000 \
 	--max_memory 25G \
 	--CPU 8 \
-	--full_cleanup \ 
+	--full_cleanup \
 	--output $dir/rna_trinity/$sra-Trinity
 
-# since full_cleanup doesn't work, manual cleanup is needed.
-    ls $dir/rna_trinity/*/* -d | grep -v '.fasta' | xargs rm -rf
+    
+	ls $dir/rna_trinity/* -d | grep -v '.fasta' | xargs rm -rf
 
 done
