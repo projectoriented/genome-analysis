@@ -10,32 +10,39 @@
 
 module load bioinfo-tools
 module load star
+module load trinity
 
 dir=~/genome-analysis/analyses/02_genome_assembly
 data=~/genome-analysis/analyses/data/raw_data/transcriptome/trimmed
-p1=/home/mei/genome-analysis/analyses/data/raw_data/transcriptome/trimmed/SRR6040094_scaffold_10.1.fastq.gz 
-p2=/home/mei/genome-analysis/analyses/data/raw_data/transcriptome/trimmed/SRR6040094_scaffold_10.2.fastq.gz
-sra=$(echo $p1 | sed s'/.*ed\///; s/_sc.*//')
 
-#~/genome-analysis/analyses/scripts/rna-index-star.sh
+files=$(ls -d /home/mei/genome-analysis/analyses/data/raw_data/transcriptome/trimmed/*_scaffold_10.*.fastq.gz )
 
-star \
-    --runThreadN 8 \
-    --limitBAMsortRAM 2616557322 \
-    --genomeDir $dir/rna_star \
-    --readFilesIn $p1 $p2\
-    --readFilesCommand gunzip -c \
-    --outSAMtype BAM SortedByCoordinate \
-    --outFileNamePrefix $dir/rna_star/$sra-star.
+for i in $files
+do
+    p1=$(echo $i | grep '10.1.')
+    p2=$(echo $i | grep '10.2.')
+    sra=$(echo $p1 | sed s'/.*ed\///; s/_sc.*//')
 
-module load trinity
+    #~/genome-analysis/analyses/scripts/rna-index-star.sh
 
-Trinity \
-    --genome_guided_bam $dir/rna_star/$sra*.bam \
-    --genome_guided_max_intron 10000 \
-    --max_memory 25G \
-    --CPU 8 \
-    --full_cleanup \
-    --output $dir/rna_trinity/$sra-Trinity
+    star \
+	--runThreadN 8 \
+	--limitBAMsortRAM 2616557322 \
+	--genomeDir $dir/rna_star \
+	--readFilesIn $p1 $p2 \
+	--readFilesCommand gunzip -c \
+	--outSAMtype BAM SortedByCoordinate \
+	--outFileNamePrefix $dir/rna_star/$sra-star.
 
-ls $dir/rna_trinity/* -d | grep -v '.fasta' | xargs rm -rf
+    Trinity \
+	--genome_guided_bam $dir/rna_star/$sra*.bam \
+	--genome_guided_max_intron 10000 \
+	--max_memory 25G \
+	--CPU 8 \
+	--full_cleanup \ # this doesn't work.
+	--output $dir/rna_trinity/$sra-Trinity
+
+# since full_cleanup doesn't work, manual cleanup is needed.
+    ls $dir/rna_trinity/* -d | grep -v '.fasta' | xargs rm -rf
+
+done
