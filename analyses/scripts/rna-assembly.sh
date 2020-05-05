@@ -3,7 +3,7 @@
 #SBATCH -A g2020008
 #SBATCH -p core
 #SBATCH -n 4
-#SBATCH -t 8:00:00
+#SBATCH -t 14:00:00
 #SBATCH -J rna_assembly
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user meifang.wu.7427@student.uu.se
@@ -42,6 +42,6 @@ for (( i=0; i<${#files[@]}; i+=2 )); do
 	--output $dir/rna_trinity/$sra-Trinity
 
     
-	ls $dir/rna_trinity/* -d | grep -v '.fasta' | xargs rm -rf
+	ls -d $dir/rna_trinity/$sra-Trinity/* | grep -v '.fasta' | xargs rm -rf
 
 done
