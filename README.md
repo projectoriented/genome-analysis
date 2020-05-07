@@ -4,11 +4,9 @@ Genome Analysis, VT2020 project course at Uppsala University. Bioinformatics, MS
 ## Introduction
 *Durio zibethinus*, other known as Durian, is a fruit indigenous to South East Asia and bears a dense nutrient profile of impressive vitamins and mineral contents, amongst other consitutients. This species, amongst other 30 subsumed species of the genus, is the most commonly appearing and consumed in SEA. It has a very distinct aroma and some might even describe it to be a combination of rotten onions and turpentine garnished with a gym sock. Separately, it is a lipid-rich fruit which describes its creamy texture and ability to taste like ice cream once stored in the freezer for an adequate time. The anatomy of a Durian interestingly resembles the spikey-ness of a hedgehog and the flesh of the fruit resembling a washboard stomach at its prime. Durian is most pungent when it has ripen and its at this point the shell becomes less rigid so it can be easier to be broken and consumed.
 
-In the selected paper, the authors use various softwares to assemble and describe the major players in the draft genome of the aforementioned fruit. They observed upregulation in sulfur (pungent smell) production in durian fruit arils (fruit flesh), expansions in sulfur-related pathway gene families, and that the complexity of the aroma could potentially be linked to the fruit ripening.
+In the selected paper, the authors use various softwares to assemble and describe the major players in the draft genome of the aforementioned fruit. They observed upregulation in sulfur (pungent smell) production in durian fruit arils (fruit flesh), expansions in sulfur-related pathway gene families, and that the complexity of the aroma could potentially be linked to the fruit ripening. 
 
-[Talk about the fruits potential to tap into the global market.]
-
-As durian becomes a more desirable fruit world-wide and its production is scaled globally, it would be imperative to draw focus on its contribution to biomass. The husk, locules (rind), and seed contributes to about 60% waste after the arils are harvested and consumed. I would like to find out if there is a functional gene that reduces the size of seeds.
+As durian becomes a more desirable fruit world-wide and its production is scaled globally, it would be imperative to draw focus on its contribution to biomass. The husk, locules (rind), and seed contributes to about 60% waste after the arils are harvested and consumed. Based on the available annotation and research performed on this fruit, I would like to find out if there is a functional gene that reduces the size of seeds or reducing the overall contribution to biomass.
 
 ## Data, data management, and softwares
 
@@ -52,10 +50,10 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 - [x] Assemble *Durio z.* genome 
 
 #### Week 16, April 13 - April 18
-- [ ] Transcriptome assembly (not sure if using RNA-seq data from SRA or directly from the genome assembly)
+- [x] Transcriptome assembly (not sure if using RNA-seq data from SRA or directly from the genome assembly)
 
 #### Week 17, April 20 - April 25
-- [ ] Use Maker2 and annotation genome + transcriptomic assembly. Compare it to see if need for correction with the existing annotation file for draft genome presented by paper.
+- [x] Use Maker2 and annotation genome + transcriptomic assembly. Compare it to see if need for correction with the existing annotation file for draft genome presented by paper.
 
 #### Week 18, April 27 - May 1
 - [ ] Use either HTseq or Deseq2 (R library) to perform differential analysis.
