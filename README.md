@@ -26,8 +26,8 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 | Pilon | Improve draft assembly |
 | Trinity | RNA-seq assembly |
 | Maker2 | Annotation |
-| BWA, TopHat | Aligner |
-| HTseq | Differential Analysis |
+| BWA, STAR, Samtools | Aligner |
+| HTseq, Deseq2 | Differential Analysis |
 
 ## Methods
 
