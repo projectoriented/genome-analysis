@@ -1,0 +1,49 @@
+Assembly	durioz.pilon
+# contigs (>= 0 bp)	756
+# contigs (>= 1000 bp)	756
+# contigs (>= 5000 bp)	676
+# contigs (>= 10000 bp)	485
+# contigs (>= 25000 bp)	113
+# contigs (>= 50000 bp)	39
+Total length (>= 0 bp)	29794825
+Total length (>= 1000 bp)	29794825
+Total length (>= 5000 bp)	29537469
+Total length (>= 10000 bp)	28058760
+Total length (>= 25000 bp)	22246790
+Total length (>= 50000 bp)	19856769
+# contigs	756
+Largest contig	3001067
+Total length	29794825
+Reference length	24162007
+GC (%)	31.64
+Reference GC (%)	33.51
+N50	574099
+NG50	880685
+N75	24350
+NG75	193700
+L50	13
+LG50	9
+L75	118
+LG75	22
+# misassemblies	168
+# misassembled contigs	86
+Misassembled contigs length	18564751
+# local misassemblies	255
+# unaligned mis. contigs	15
+# unaligned contigs	312 + 189 part
+Unaligned length	4731663
+Genome fraction (%)	85.862
+Duplication ratio	1.208
+# N's per 100 kbp	0.00
+# mismatches per 100 kbp	324.72
+# indels per 100 kbp	118.16
+Largest alignment	2720121
+Total aligned length	25048671
+NA50	185895
+NGA50	281398
+NA75	16717
+NGA75	67325
+LA50	31
+LGA50	19
+LA75	211
+LGA75	59

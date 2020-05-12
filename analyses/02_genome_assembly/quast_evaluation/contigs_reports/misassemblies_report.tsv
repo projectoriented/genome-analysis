@@ -1,0 +1,14 @@
+Assembly	durioz.pilon
+# misassemblies	168
+    # relocations	166
+    # translocations	0
+    # inversions	2
+# misassembled contigs	86
+Misassembled contigs length	18564751
+# local misassemblies	255
+# unaligned mis. contigs	15
+# mismatches	67367
+# indels	24514
+    # indels (<= 5 bp)	22964
+    # indels (> 5 bp)	1550
+Indels length	51851

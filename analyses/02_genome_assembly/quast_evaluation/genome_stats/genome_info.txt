@@ -1,0 +1,14 @@
+reference chromosomes:
+	NSDW01000010.1_Durio_zibethinus_cultivar_Musang_King_isolate_D1_scaffold_10__whole_genome_shotgun_sequence (total length: 24162007 bp, maximal covered length: 20745940 bp)
+
+total genome size: 24162007
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+durioz-pilon             | 85.86182% | 1.20810     | 221       | -         | -         | -         | -         |

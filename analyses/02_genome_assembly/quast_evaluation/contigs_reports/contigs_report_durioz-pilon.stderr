@@ -1,0 +1,5 @@
+Writing filtered delta file /home/mei/genome-analysis/analyses/02_genome_assembly/quast_evaluation/contigs_reports/nucmer_output/durioz-pilon.filter
+Reading delta file /home/mei/genome-analysis/analyses/02_genome_assembly/quast_evaluation/contigs_reports/nucmer_output/durioz-pilon.delta
+Writing plot files /home/mei/genome-analysis/analyses/02_genome_assembly/quast_evaluation/contigs_reports/nucmer_output/durioz-pilon.fplot, /home/mei/genome-analysis/analyses/02_genome_assembly/quast_evaluation/contigs_reports/nucmer_output/durioz-pilon.rplot
+Writing gnuplot script /home/mei/genome-analysis/analyses/02_genome_assembly/quast_evaluation/contigs_reports/nucmer_output/durioz-pilon.gp
+Rendering plot /home/mei/genome-analysis/analyses/02_genome_assembly/quast_evaluation/contigs_reports/nucmer_output/durioz-pilon.html

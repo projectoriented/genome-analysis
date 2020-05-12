@@ -1,0 +1,8 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                       durioz.pilon
+# fully unaligned contigs      312         
+Fully unaligned length         3072667     
+# partially unaligned contigs  189         
+Partially unaligned length     1658996     
+# N's                          0           
