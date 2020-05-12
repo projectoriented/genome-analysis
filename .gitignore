@@ -1,5 +1,8 @@
 analyses/data/*
-analyses/02_genome_assembly/*
+analyses/02_genome_assembly/rna_star
+analyses/02_genome_assembly/rna_trinity
+analyses/02_genome_assembly/pilon_assembly
+analyses/02_genome_assembly/canu_assembly
 analyses/01_preprocessing/illumina-bwa
 analyses/01_preprocessing/correction_canu
 Student*.pdf
