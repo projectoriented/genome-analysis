@@ -13,12 +13,24 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 ### Estimate space required + how data will be organized
 *Durio z.* has a total genome length of 715.23 megabases. The PacBio and Illumina SRA records are 27.4Gb and 83.3Gb respectively. I suspect I will have to delete files after each step up until completing assembly; e.g. delete after aligning, and assembly. I will make sure I will have a clear + coherent directory tree and naming scheme for all steps and files.
 
-| Type of data | Source | Description |
-| --- | --- | --- |
-| Whole Genome Sequence | SRA | Assemble the PacBio record and correct with the Illumina record. |
-| Annotation for *Durio Zibethinus* | NCBI Genome | GCF_002303985.1 |
+<details>
+  <summary>Transcriptomic data</summary>
+  
+  | Species | SRA record | Location of Extraction |
+  | --- | --- | --- |
+  | *Durio z.* Musang King | SRR6040092 | leaf |
+  | *Durio z.* Musang King | SRR6040093 | root |
+  | *Durio z.* Musang King | SRR6040094 | aril 2 |
+  | *Durio z.* Musang King | SRR6040096 | stem |
+  | *Durio z.* Musang King | SRR6040097 | aril 3 |
+  | *Durio z.* Monthong | SRR6156066 | aril 2|
+  | *Durio z.* Monthong | SRR6156067 | aril 3|
+  | *Durio z.* Monthong | SRR6156069 | aril 1|
+</details>
 
-[more to fill out]
+| Type of Data | Source | Details |
+| --- | --- | --- |
+| Annotation for *Durio Zibethinus* | NCBI Genome | [GCF_002303985.1](https://www.ncbi.nlm.nih.gov/assembly/GCF_002303985.1/) |
 
 | Software | Analysis |
 | --- | --- |
@@ -29,17 +41,24 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 | BWA, STAR, Samtools | Aligner |
 | HTseq, Deseq2 | Differential Analysis |
 
+
+
 ## Methods
 
-**Quality Control**
+**Quality Check**
+PacBio
+Illumina
 
-**Aligner**
+**Genome Assembly**
+The genome of Durio z. is a whopping size of [715.23 Mb](https://www.ncbi.nlm.nih.gov/genome/?term=txid66656[orgn]) and would take too long to analyze in its entirety. Thus, I have taken [scaffold 10](https://www.ncbi.nlm.nih.gov/Traces/wgs/NSDW01?display=contigs) and its respective transcriptome.
+1. Assemble PacBio reads with [Canu](https://canu.readthedocs.io/en/latest/quick-start.html). Canu performs the correction and trimming step in addition to the assembly. The options used can be seen in the pacbio-canu.sh bash script.
+2. Correct step 1 with Illumina reads using [Pilon](https://github.com/broadinstitute/pilon/wiki). The preprocessing steps to this entails using [bwa mem](http://bio-bwa.sourceforge.net/bwa.shtml) to align both the Canu produced assembly and paired Illumina reads. After the bwa step, which produced a SAM (sequence alignment map) file, I used [samtools](http://www.htslib.org/doc/samtools.html) to generate a binary version of the alignment map. The options used can be seen in the illumina-bwa.sh bash script.
 
-**DNA Assembly**
+**Transcriptome Assembly**
 
-**RNA Assembly**
 
 **Assembly Evaluation**
+I used QUAST to evaluate the corrected genome assembly produced by Pilon and the results show.
 
 **Annotation**
 
@@ -66,6 +85,14 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 - [ ] Perform comparative analysis on genes with homologous species that can give me some information on identifying functional information regarding the husk, locules, and seed. 
 
 #### Week 20, May 4 - May 8
+- UPPMAX was down, nothing done this week.
+
+#### Week 20, May 11 - May 15
+- [ ] Extra analyses: assembly with different parameters, assembly evaluation with more than one method, and deeper analysis of differential exp. analyses (e.g. different comparisons).
+
+#### Week 20, May 18 - May 25
+- [ ] Wrap up the README
+- [ ] Prepare 10 min. presentation slides and for 5 min. discussion.
 
 ## Results
 ## Limitations
