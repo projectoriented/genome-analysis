@@ -31,13 +31,19 @@ As durian becomes a more desirable fruit world-wide and its production is scaled
 
 ## Methods
 
-**Genome assembly.**
+**Quality Control**
 
-**Transcriptome assembly.**
+**Aligner**
 
-**Genome annotation.**
+**DNA Assembly**
 
-**Phylogeny.**
+**RNA Assembly**
+
+**Assembly Evaluation**
+
+**Annotation**
+
+**Differential Expression**
 
 
 ## Time Plan
