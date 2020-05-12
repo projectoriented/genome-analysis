@@ -2,3 +2,4 @@ analyses/data/*
 analyses/02_genome_assembly/*
 analyses/01_preprocessing/*
 Student*.pdf
+analyses/03_annotations/*
