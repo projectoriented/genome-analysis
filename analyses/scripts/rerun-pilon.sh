@@ -9,10 +9,10 @@ dir=~/genome-analysis/analyses
 dir_align=$dir/01_preprocessing/illumina-bwa
 
 pilon \
-    --genome $dir/02*/canu_assembly/durioz.contigs.fasta \
+    --genome $dir/02_genome_assembly/pilon_assembly/rerun.pilon.fasta \
     --frags $dir_align/SRR6058604-aln-sorted.bam \
     --changes \
-    --output rerun.pilon \
+    --output rerun_1.pilon \
     --outdir $dir/02_genome_assembly/pilon_assembly/ \
     --fix all \
     --threads 8 \
