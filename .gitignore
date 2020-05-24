@@ -5,5 +5,7 @@ analyses/02_genome_assembly/pilon_assembly
 analyses/02_genome_assembly/canu_assembly
 analyses/01_preprocessing/illumina-bwa
 analyses/01_preprocessing/correction_canu
+analyses/02_genome_assembly/mummer-evaluation/*.delta
+analyses/02_genome_assembly/rna_star_run_2/*Aligned.sortedByCoord.out.bam
 Student*.pdf
 analyses/03_annotations/*

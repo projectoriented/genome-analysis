@@ -2,7 +2,7 @@
 
 #SBATCH -A g2020008
 #SBATCH -p core
-#SBATCH -n 2
+#SBATCH -n 4
 #SBATCH -t 5:00:00
 #SBATCH -J mummerplot
 #SBATCH --mail-type=ALL
@@ -21,11 +21,11 @@ for i in ${paths[*]}
 do
     prefix="$out/nucmer-$(echo $i | cut -f7 -d'/')"
 
-    nucmer --maxmatch --threads=4 -p $prefix $ref $i
+    nucmer --maxmatch --threads=8 -p $prefix $ref $i
     
     show-coords -r -c -l $prefix.delta > $prefix.coords
     show-snps -C $prefix.delta > $prefix.snps
     show-tiling $prefix.delta > $prefix.tiling 
 
-    mummerplot --layout --medium -R $ref -Q $i -p $prefix $prefix.delta
+    mummerplot --layout --filter --png --medium -p $prefix $prefix.delta
 done
